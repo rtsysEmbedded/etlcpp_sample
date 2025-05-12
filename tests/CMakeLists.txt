@@ -15,6 +15,7 @@ FetchContent_Declare(
 )
 
 FetchContent_MakeAvailable(UnitTest++)
+add_compile_options(-Wall -Werror)
 
 # Add test executable
 add_executable(${PROJECT_NAME} test.cpp)
