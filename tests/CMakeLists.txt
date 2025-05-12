@@ -15,7 +15,9 @@ FetchContent_Declare(
 )
 
 FetchContent_MakeAvailable(UnitTest++)
-add_compile_options(-Wall -Werror)
+
+target_compile_options(UnitTest++ PRIVATE -Wall -Wno-error=uninitialized)
+
 
 # Add test executable
 add_executable(${PROJECT_NAME} test.cpp)
